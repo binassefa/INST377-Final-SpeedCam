@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Speed Cameras</title>
+    <link rel="stylesheet" href="search_style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
+    <link
+    rel="stylesheet"
+    href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+    integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+    crossorigin=""
+  />
+  <script
+    src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+    integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+    crossorigin=""
+  ></script>
+  </head>
+
+  <body>
+
+    <header>
+
+      <h1>Speed Cameras in PG County</h1>
+
+      <img class="header img" src="images/PGcountyLogo.png" alt="PG county logo">
+
+      <nav>
+
+      <ul>
+        <li><a href="search.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="data.html">Data</a></li>
+        <li><a href="documentation.html">Documentation</a></li>
+      </ul>
+
+    </nav>
+
+    </header>
+
+    <main>
+        
+        
+        <aside>
+
+            <h3>Search</h3>
+            <input type="text" placeholder="Search.." name="search">
+        <br>
+            <h3>Filter</h3>
+            <select id="criteria">
+                <option value="Select">Select...</option>
+                <option value="object ID">Object ID</option>
+                <option value="district">District</option>
+                <option value="trailer">Trailer</option>
+                <option value="name">School Name</option>
+                <option value="address">Street Address</option>
+                <option value="speed">Posted Speed</option>
+                <option value="enforce">Enforcement</option>
+                <option value="location">Location</option>
+                <option value="location 1">Coordinates</option>
+            </select>
+          <br />
+          <br />
+          <br />
+            <button type="go">Go</button>
+        </aside>
+
+        <article>
+            <div class="wrapper"><p>Search a location and select a filter to get 
+                how many speeding cameras there are!
+            </p>
+            <div class="content">
+                <div id="mapid" style="width: 600px; height: 400px;"></div>
+            </div></div>
+            <p class="describe">Location Description...</p>
+          </article>
+    </main>
+    <script>
+     
+      var mymap = L.map('mapid').setView([38.83, -76.86], 10);
+      
+  L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
+      maxZoom: 18,
+      attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, ' +
+          '<a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
+          'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+      id: 'mapbox/streets-v11',
+      tileSize: 512,
+      zoomOffset: -1
+  }).addTo(mymap);
+  //markers for all the speed cameras
+      L.marker([39.10491100, -76.86664100]).addTo(mymap);
+      L.marker([38.80328000, -76.99046000]).addTo(mymap);
+      L.marker([38.84431100, -76.88702000]).addTo(mymap);
+      L.marker([38.88809300, -76.89848000]).addTo(mymap);
+      L.marker([39.03525200, -76.91856900]).addTo(mymap);
+      L.marker([38.95259300, -76.94206900]).addTo(mymap); 
+      L.marker([38.95259300, -76.94206900]).addTo(mymap); 
+      L.marker([39.10491100, -76.86664100]).addTo(mymap);
+      L.marker([38.80328000, -76.99046000]).addTo(mymap);
+      L.marker([39.10491100, -76.86664100]).addTo(mymap);
+      L.marker([39.03525200, -76.91856900]).addTo(mymap);
+      L.marker([38.81850100, -76.75007000]).addTo(mymap);
+      L.marker([38.81850100, -76.75007000]).addTo(mymap);
+      L.marker([38.84802200, -76.92309700]).addTo(mymap);
+      L.marker([38.93143200, -76.89015900]).addTo(mymap);
+      L.marker([39.00374400, -76.96701700]).addTo(mymap);
+      L.marker([38.81850100, -76.75007000]).addTo(mymap);
+      L.marker([38.96191400, -76.86234000]).addTo(mymap);
+      L.marker([38.73946400, -77.00152700]).addTo(mymap);
+      L.marker([38.84431100, -76.88702000]).addTo(mymap);
+      L.marker([39.10491100, -76.86664100]).addTo(mymap);
+      L.marker([39.10491100, -76.86664100]).addTo(mymap);
+      L.marker([38.87954400, -76.82648100]).addTo(mymap);
+      L.marker([38.73946400, -77.00152700]).addTo(mymap);
+      L.marker([38.87954400, -76.82648100]).addTo(mymap);
+      L.marker([38.95259300, -76.94206900]).addTo(mymap);
+      L.marker([38.70447100, -76.88234800]).addTo(mymap);
+      L.marker([38.81850100, -76.75007000]).addTo(mymap);
+      L.marker([38.93143200, -76.89015900]).addTo(mymap);
+      L.marker([38.95259300, -76.94206900]).addTo(mymap);
+      L.marker([39.03525200, -76.91856900]).addTo(mymap);
+      L.marker([38.73946400, -77.00152700]).addTo(mymap);
+      L.marker([38.88531000, -76.91362000]).addTo(mymap);
+      L.marker([38.95259300, -76.94206900]).addTo(mymap);
+      L.marker([38.84802200, -76.92309700]).addTo(mymap);
+      L.marker([38.88531000, -76.91362000]).addTo(mymap);
+      L.marker([38.86218000, -76.88245100]).addTo(mymap);
+      L.marker([38.88531000, -76.91362000]).addTo(mymap);
+      L.marker([39.10491100, -76.86664100]).addTo(mymap);
+      L.marker([38.76133400, -76.91533900]).addTo(mymap);
+      L.marker([38.93143200, -76.89015900]).addTo(mymap);
+      L.marker([38.96191400, -76.86234000]).addTo(mymap);
+      L.marker([38.82383400, -76.94855900]).addTo(mymap);
+      L.marker([38.87954400, -76.82648100]).addTo(mymap);
+      L.marker([38.95259300, -76.94206900]).addTo(mymap);
+      L.marker([38.88531000, -76.91362000]).addTo(mymap);
+      L.marker([38.84802200, -76.92309700]).addTo(mymap);
+      L.marker([38.80328000, -76.99046000]).addTo(mymap);
+      L.marker([38.93747000, -76.83862900]).addTo(mymap);
+      L.marker([38.93143200, -76.89015900]).addTo(mymap);
+      L.marker([38.93143200, -76.89015900]).addTo(mymap);
+      L.marker([38.70447100, -76.88234800]).addTo(mymap);
+      L.marker([38.84802200, -76.92309700]).addTo(mymap);
+      L.marker([38.73946400, -77.00152700]).addTo(mymap);
+      L.marker([39.10491100, -76.86664100]).addTo(mymap);
+      L.marker([38.96097100, -76.74046700]).addTo(mymap);
+      L.marker([38.93143200, -76.89015900]).addTo(mymap);
+      L.marker([38.80328000, -76.99046000]).addTo(mymap);
+      L.marker([39.03525200, -76.91856900]).addTo(mymap);
+      L.marker([38.95259300, -76.94206900]).addTo(mymap);
+      L.marker([38.95259300, -76.94206900]).addTo(mymap);
+      L.marker([38.93143200, -76.89015900]).addTo(mymap);
+      L.marker([38.80328000, -76.99046000]).addTo(mymap);
+      L.marker([38.96097100, -76.74046700]).addTo(mymap);
+      L.marker([38.67073400, -77.02305000]).addTo(mymap);
+      L.marker([38.93747000, -76.83862900]).addTo(mymap);
+      L.marker([39.03525200, -76.91856900]).addTo(mymap);
+      L.marker([39.03525200, -76.91856900]).addTo(mymap);
+      L.marker([38.80328000, -76.99046000]).addTo(mymap);
+      L.marker([38.81850100, -76.75007000]).addTo(mymap);
+
+  
+  //set to mobile resolution
+  window.screen.availHeight;
+  window.screen.availWidth;
+  
+      </script>
+  </body>
+</html>
