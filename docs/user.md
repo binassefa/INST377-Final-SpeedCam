@@ -1,4 +1,4 @@
-User Manual (docs/user.md)
+# User Manual
 
 Our applications primary stakeholders are drivers and our secondary stakeholders are 
 local government officials including law enforcement. After reviewing the speed camera data from the 
