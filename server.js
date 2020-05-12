@@ -27,32 +27,5 @@ app.get('/documentation.html', function (req, res) {
 });
 
 
-app.get('/api', (req, res) => {
- 
-  const baseURL = 'https://data.princegeorgescountymd.gov/resource/mnkf-cu5c.json';
-  fetch(baseURL)
-    .then((r) => r.json())
-    .then((r) => r.map((dataset) => dataset))
-    .then((data) => {
-      console.log(data);
-      res.send({ data: data });
-    })
-    .catch((err) => {
-      console.log(err);
-      res.redirect('/error');
-    });
-});
-
-app.post('/api/post', (req, res) => {
-  res.json({
-    message: 'POST'
-  });
-});
-
-app.put('/api/put', (req, res) => {
-  res.json({
-    message: 'PUT'
-  });
-});
 
 app.listen(port, () => console.log(`Example app listening on port ${port}!`));
