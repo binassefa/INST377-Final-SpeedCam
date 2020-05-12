@@ -1,0 +1,40 @@
+{
+  "name": "INST337-Final-SpeedCam",
+  "version": "1.0.0",
+  "description": "Final Project for INST377",
+  "main": "server.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon --exec babel-node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/binassefa/INST377-Final-SpeedCam.git"
+  },
+  "author": "Morning-Group-5",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/binassefa/INST377-Final-SpeedCam/issues"
+  },
+  "homepage": "https://github.com/binassefa/INST377-Final-SpeedCam#readme",
+  "dependencies": {
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.9.6",
+    "@babel/node": "^7.8.7",
+    "@babel/preset-env": "^7.9.6",
+    "eslint": "^7.0.0",
+    "eslint-config-airbnb-base": "^14.1.0",
+    "eslint-plugin-html": "^6.0.2",
+    "eslint-plugin-import": "^2.20.2",
+    "express": "^4.17.1",
+    "node-fetch": "^2.6.0",
+    "nodemon": "^2.0.3",
+    "python": "0.0.4",
+    "python-shell": "^2.0.0",
+    "sqlite": "^4.0.7",
+    "sqlite3": "^4.2.0"
+  }
+}
